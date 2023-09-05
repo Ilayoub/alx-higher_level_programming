@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 # 12-fizzbuzz.py
-"""The function prints the numbers from 1 to 100 separated by a space"""
+"""The function prints the numbers from
+1 to 100 separated by a space"""
+
 def fizzbuzz():
     for number in range(1, 101):
-        if number % 3 == 0 and number % 5 == 0:
+    if number % 3 == 0 and number % 5 == 0:
             print("FizzBuzz ", end="")
         elif number % 3 == 0:
             print("Fizz ", end="")
