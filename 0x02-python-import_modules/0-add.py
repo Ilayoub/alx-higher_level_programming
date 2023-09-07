@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-    """Prints the sum of 1 and 2."""
 from add_0 import add
 
 if __name__ == "__main__":
