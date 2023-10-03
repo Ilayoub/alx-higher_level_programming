@@ -36,7 +36,7 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
-    """The program returns the list of lists representation of a solved chessboard"""
+    """Returns the list of lists representation of a solved chessboard"""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
