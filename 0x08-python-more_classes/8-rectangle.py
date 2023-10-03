@@ -3,18 +3,18 @@
 
 
 class Rectangle:
-    """The program represents a rectangle"""
+    """The program represents a rectangle
 
     Attributes:
-        number_of_instances (int): The number of Rectangle instances
-        print_symbol (any): The symbol used for string representation
+        number_of_instances (int): The number of Rectangle instances.
+        print_symbol (any): The symbol used for string representation.
     """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """Initialize a new rectangle
 
         Args:
             width (int): The width of the new rectangle
@@ -26,7 +26,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/set the width of the rectangle"""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -39,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the rectangle"""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -51,24 +51,24 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """The program returns the area of the rectangle"""
+        """Return the area of the rectangle"""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """The program returns the perimeter of the rectangle"""
+        """Return the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """The program returns the rectangle with the greater area
+        """Return the Rectangle with the greater area
 
         Args:
-            rect_1 (Rectangle): The first Rectangle.
-            rect_2 (Rectangle): The second Rectangle.
+            rect_1 (Rectangle): The 1st rectangle
+            rect_2 (Rectangle): The 2nd rectangle
         Raises:
-            TypeError: If either of rect_1 or rect_2 is not a Rectangle.
+            TypeError: If either of rect_1 or rect_2 is not a rectangle
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -79,9 +79,9 @@ class Rectangle:
         return (rect_2)
 
     def __str__(self):
-        """The program returns the printable representation of the rectangle
+        """Return the printable representation of the rectangle
 
-        It  represents the rectangle with the # character
+        Represents the rectangle with the # character
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -94,12 +94,12 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """The program returns the string representation of the rectangle"""
+        """Return the string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
 
     def __del__(self):
-        """The program prints a message for every deletion of a rectangle"""
+        """Print a message for every deletion of a rectangle"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
