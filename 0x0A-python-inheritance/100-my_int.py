@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""The program defines a class MyInt that inherits from int"""
+"""The program defines a class MyInt
+   that inherits from int"""
 
 class MyInt(int):
     """Inverts int operators == and !="""
