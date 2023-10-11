@@ -1,7 +1,6 @@
-
 #!/usr/bin/python3
-"""The program defines a class student based on 9-student.py"""
-
+"""The program defines a class student
+   based on 9-student.py"""
 
 class student:
     """Represents a student"""
