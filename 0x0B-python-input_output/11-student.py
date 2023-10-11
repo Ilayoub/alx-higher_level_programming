@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""The program defines a class student"""
+"""The program defines a class student
+   based on 10-student.py"""
 
 class Student:
     """Represent a student"""
@@ -19,8 +20,8 @@ class Student:
     def to_json(self, attrs=None):
         """Gets a dictionary representation of the student
 
-        If attrs is a list of strings, represents only those attributes
-        included in the list.
+        If attrs is a list of strings, represents only those
+        attributes included in the list
 
         Args:
             attrs (list): (Optional) The attributes to be represented
