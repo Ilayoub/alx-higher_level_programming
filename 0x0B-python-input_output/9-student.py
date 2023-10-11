@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """The program defines a class student"""
 
-
-class student:
-    """Represents a student"""
+class Student:
+    """Represent a student"""
 
     def __init__(self, first_name, last_name, age):
-        """Initializes a new student
+        """InitializeS a new Student
 
         Args:
             first_name (str): The student’s first name
