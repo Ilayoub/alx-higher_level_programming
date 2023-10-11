@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""The program defines a class student based on 10-student.py"""
+"""The program defines a class student
+   based on 10-student.py"""
 
-
-class student:
-    """Represents a student"""
+class Student:
+    """Represent a student"""
 
     def __init__(self, first_name, last_name, age):
         """Initializes a new student
