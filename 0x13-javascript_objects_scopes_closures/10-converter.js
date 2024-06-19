@@ -3,7 +3,5 @@
 // to another base passed as argument
 
 exports.converter = function (base) {
-  return function (n) {
-    return (n.toString(base));
-  };
+  return function (n) { return n.toString(base); };
 };
