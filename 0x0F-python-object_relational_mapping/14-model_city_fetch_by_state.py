@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 """
-The function prints the first State object from
-the database `hbtn_0e_6_usa`
+The function prints all City objects from the
+database `hbtn_0e_14_usa`
 """
 
 from sys import argv
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get a state
-    from the database.
+    Access to the database and get
+    the cities from the database
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -21,9 +22,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    instance = session.query(State).order_by(State.id).first()
 
-    if instance is None:
-        print('Nothing')
-    else:
-        print('{0}: {1}'.format(instance.id, instance.name))
+    query = session.query(City, State).join(State)
+
+    for _c, _s in query.all():
+        print("{}: ({:d}) {}".format(_s.name, _c.id, _c.name))
+
+    session.commit()
+    session.close()
