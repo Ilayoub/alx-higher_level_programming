@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-The function prints all City objects from the
-database `hbtn_0e_14_usa`
+The function prints all City objects
+from the database `hbtn_0e_14_usa`
 """
 
 from sys import argv
@@ -12,8 +12,8 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get
-    the cities from the database
+    Access to the database and get the cities
+    from the database.
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
